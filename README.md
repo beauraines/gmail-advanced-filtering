@@ -13,6 +13,8 @@ Schedule for every minute
 
 Can be done with clasp
 
+clasp login to push/pull
+clasp login --creds creds.json (from downloaded OAuth) to run
 
 2321  clasp run setProperty -p '["RTM_EMAIL_ADDRESS","rmilk.com"]'
  2324  clasp run setProperty -p '["MAX_THREADS",240]
