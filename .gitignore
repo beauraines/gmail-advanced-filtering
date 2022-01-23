@@ -1,0 +1,5 @@
+## For clasp settings
+.clasp.json
+.clasprc.json
+appsscript.json
+creds.json
