@@ -45,6 +45,9 @@ function processQuery(query) {
         case 'renewOrReturnLibraryBooks':
           renewOrReturnLibraryBooks(message);
           break;
+        case 'saveKindleNotes':
+          saveKindleNotes(message);
+          break;
         default:
           Logger.error("Action not defined for " + query.name)
       }

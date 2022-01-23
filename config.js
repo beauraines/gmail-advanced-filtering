@@ -8,6 +8,7 @@ const queries = [
     {"filter":"label:sms (Costco Rx)  (is ready for pick up)","name":"Pick up prescription","action":"pickUpPrescription"},
     {"filter":"from:kcls.org  subject:(Materials on hold)","name":"Pick up library book","action":"pickupLibraryBook"},
     {"filter":"subject:(Courtesy Due Date Reminder from KCLS)","name":"Return or renew library books","action":"renewOrReturnLibraryBooks"},
+    // {"filter":"from:amazon subject:'your kindle notes'","name":"Save kindle notes","action":"saveKindleNotes"},
     {"filter":"from:overdrive subject:'digital hold available to borrow'","name":"ebook ready for download","action":"libraryEbookDownload"}
   ]
   

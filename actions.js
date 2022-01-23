@@ -75,6 +75,19 @@ function changeAriaBatteries() {
     addRememberTheMilkTaskByEmail(task);
 }
 
-function saveKindleNotesToEvernote(message) {
-    Logger.info('Sending kindle notes to Evernote');
+function saveKindleNotes(message) {
+    Logger.info('Saving Kindle Notes to Drive');
+    // TODO - create the Kindle Notes folder if it does not exist
+    let kindleNotesFolder = DriveApp.getFoldersByName('Kindle Notes')[0];
+    let savedFiles = [];
+    let attachments = message.getAttachments();
+    for (const attachment of attachments) {
+      if (attachment.getName().endsWith('.pdf')) {
+        let file = DriveApp.createFile(attachment.copyBlob());
+        // FIXME getting a mystery exception that just says try again later
+        file = file.setName(attachment.getName()).moveTo(kindleNotesFolder);
+        savedFiles.push(file.toString());
+      }
+    }
+    console.log(savedFiles);
 }
